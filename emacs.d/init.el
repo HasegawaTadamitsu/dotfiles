@@ -9,10 +9,11 @@
 
 (when window-system
  (tool-bar-mode 0) 
- (scroll-bar-mode 0) 
-)
+ (scroll-bar-mode 0) )
 
+(setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
+
 (setq-default transient-mark-mode t)
 
 (partial-completion-mode 1)
@@ -35,3 +36,4 @@
   (setq local-coding-system `cp932))
 
 (add-to-list 'load-path "~/.emacs.d/elips")
+
