@@ -8,12 +8,15 @@
 (menu-bar-mode nil)
 
 (setq-default indent-tabs-mode nil)
+(setq-default transient-mark-mode t)
 
 (partial-completion-mode 1)
 (column-number-mode t)
 (line-number-mode t)
 
 (setq scroll-step 1)
+
+(define-key global-map (kbd "C-t") 'other-window)
 
 
 
