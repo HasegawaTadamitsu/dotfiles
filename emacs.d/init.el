@@ -7,9 +7,9 @@
 
 (menu-bar-mode 0)
 
-(cond
- ((eq window-system nil)
- (tool-bar-mode -1) 
+(when window-system
+ (tool-bar-mode 0) 
+ (scroll-bar-mode 0) 
 )
 
 (setq-default indent-tabs-mode nil)
