@@ -5,6 +5,7 @@
 
 (setq inhibit-startup-screen t)
 (menu-bar-mode 0)
+ (tool-bar-mode -1) 
 
 (setq-default indent-tabs-mode nil)
 (setq-default transient-mark-mode t)
