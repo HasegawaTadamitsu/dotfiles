@@ -4,7 +4,7 @@
 (setq locale-coding-system 'utf-8)
 
 (setq inhibit-startup-screen t)
-(menu-bar-mode nil)
+(menu-bar-mode 0)
 
 (setq-default indent-tabs-mode nil)
 (setq-default transient-mark-mode t)
@@ -27,3 +27,5 @@
 (when (eq window-system `w32)
   (set-file-name-coding-system `cp932)
   (setq local-coding-system `cp932))
+
+(add-to-list 'load-path "~/.emacs.d/elips")
