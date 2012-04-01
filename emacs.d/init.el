@@ -24,6 +24,13 @@
  `((".*",(expand-file-name "~/.emacs.d/backups/") t)))
 
 
-(when (eq windows-system 'w32')
-  (set-file-name-coding-system 'cp932)
-  (setq local-coding-system 'cp932))
+(when (eq window-system `w32)
+  (set-file-name-coding-system `cp932)
+  (setq local-coding-system `cp932)
+  (set-fontset-font (frame-parameter nil 'font)
+                       'japanese-jisx0208
+                      '("ＭＳ ゴシック" . "unicode-bmp"))
+  (set-fontset-font (frame-parameter nil 'font)
+                      'katakana-jisx0201
+                       '("ＭＳ ゴシック" . "unicode-bmp"))
+        )
