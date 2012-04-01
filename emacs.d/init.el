@@ -4,8 +4,13 @@
 (setq locale-coding-system 'utf-8)
 
 (setq inhibit-startup-screen t)
+
 (menu-bar-mode 0)
+
+(cond
+ ((eq window-system nil)
  (tool-bar-mode -1) 
+)
 
 (setq-default indent-tabs-mode nil)
 (setq-default transient-mark-mode t)
