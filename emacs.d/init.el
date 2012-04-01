@@ -23,3 +23,7 @@
 (setq auto-save-file-name-transforms
  `((".*",(expand-file-name "~/.emacs.d/backups/") t)))
 
+
+(when (eq windows-system 'w32')
+  (set-file-name-coding-system 'cp932)
+  (setq local-coding-system 'cp932))
