@@ -1,4 +1,3 @@
-
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
 (setq file-name-coding-system 'utf-8)
@@ -19,5 +18,8 @@
 (define-key global-map (kbd "C-t") 'other-window)
 
 
-
+(add-to-list 'backup-directory-alist
+ (cons "." "~/.emacs.d/backups/"))
+(setq auto-save-file-name-transforms
+ `((".*",(expand-file-name "~/.emacs.d/backups/") t)))
 
