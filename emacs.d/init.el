@@ -22,6 +22,9 @@
 
 (setq scroll-step 1)
 
+;; (global-hl-line-mode)
+
+
 (define-key global-map (kbd "C-t") 'other-window)
 
 
