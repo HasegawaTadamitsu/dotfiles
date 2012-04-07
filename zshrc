@@ -73,7 +73,7 @@ alias ll="ls -lAF"
 alias ls="ls -F"
 alias sl="ls -F"
 
-alias es="emacs -nw"
+alias es="emacsclient -nw "
 alias m="make"
 alias CLEAR="find . -name \*~ -exec \rm \{\} \;"
 alias more="less"

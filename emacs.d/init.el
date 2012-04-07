@@ -114,7 +114,7 @@
         ;; (setq url-proxy-services '(("http" . "localhost:8339")))
         ;; 3●install-elisp の関数を利用可能にする
         (auto-install-compatibility-setup)
-        ;;(setq auto-install-wget-command "hoge.sh") ;; ?
+        (setq auto-install-wget-command "hoge.sh") ;; ?
 )
 
 
@@ -292,3 +292,15 @@
   ;; M-tにanything-for-currentを割り当て
   (define-key global-map (kbd "M-t") 'anything-for-tags))
 
+
+
+;; ▼要拡張機能インストール▼
+;;; P139-140 カーソルの移動履歴──point-undo
+;; point-undoの設定
+(when (require 'point-undo nil t)
+  ;; (define-key global-map [f5] 'point-undo)
+  ;; (define-key global-map [f6] 'point-redo)
+  ;; 筆者のお勧めキーバインド
+  (define-key global-map (kbd "M-[") 'point-undo)
+  (define-key global-map (kbd "M-]") 'point-redo)
+  )
