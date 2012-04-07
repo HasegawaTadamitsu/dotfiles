@@ -114,7 +114,7 @@
         ;; (setq url-proxy-services '(("http" . "localhost:8339")))
         ;; 3●install-elisp の関数を利用可能にする
         (auto-install-compatibility-setup)
-        (setq auto-install-wget-command "hoge.sh") ;; ?
+        ;;(setq auto-install-wget-command "hoge.sh") ;; ?
 )
 
 
@@ -243,6 +243,27 @@
 (setq cua-enable-cua-keys nil) ; CUAキーバインドを無効にする
 ;; terminal の為、C-RETが使えない
 (define-key global-map (kbd "C-X SPC") 'cua-set-rectangle-mark)
+
+;; ▼要拡張機能インストール▼
+;;; P189-190 gtagsとEmacsとの連携
+;; gtags-modeのキーバインドを有効化する
+(setq gtags-suggested-key-mapping t) ; 無効化する場合はコメントアウト
+(require 'gtags nil t)
+
+;; ▼要拡張機能インストール▼
+;;; P190-191 ctagsとEmacsとの連携
+;; ctags.elの設定
+(require 'ctags nil t)
+(setq tags-revert-without-query t)
+;; ctagsを呼び出すコマンドライン。パスが通っていればフルパスでなくてもよい
+;; etags互換タグを利用する場合はコメントを外す
+;; FreeBSD のexctag （ ports/develop/ctag ）はexctagsとしてインストールされる。
+(setq ctags-command "/usr/local/bin/exctags  -e -R ")
+;; anything-exuberant-ctags.elを利用しない場合はコメントアウトする
+;;(setq ctags-command "ctags -R --fields=\"+afikKlmnsSzt\" ")
+(global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
+
+;; ▼要拡張機能インストール▼
 
 
 
